@@ -19,3 +19,6 @@ Table [Campaigns of selected profile] {
 Можна використовувати Bootstrap модулі для дизайну сторінок/таблиць.
 Набір даних задати константами в коді (або використати будь-які методи імітування виводу даних із бекенду).
 Будь-які проявлені ініціативи по додавання функціоналу в застосунок - вітаються.
+
+#### Screenshot:
+![tables screen-shot](https://github.com/velisssa/tables-agency-amazon/blob/master/src/components/Table/screenshot.jpg)
