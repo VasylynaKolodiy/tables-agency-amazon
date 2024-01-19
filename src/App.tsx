@@ -4,13 +4,13 @@ import Accounts from "./pages/Accounts/Accounts";
 import Profiles from "./pages/Profiles/Profiles";
 import Campaigns from "./pages/Campaigns/Campaigns";
 
-function App() {
+const App: React.FC = () => {
     return (
         <div className="App">
             <Routes>
                 <Route path='/' element={<Accounts/>}/>
-                <Route path='/profiles' element={<Profiles/>}/>
-                <Route path='/campaigns' element={<Campaigns/>}/>
+                <Route path='/profiles/:id' element={<Profiles/>}/>
+                <Route path='/campaigns/:id' element={<Campaigns/>}/>
             </Routes>
         </div>
     );

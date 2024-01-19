@@ -11,10 +11,18 @@ export interface IProfile {
   marketplace: string;
 }
 
+export interface IProfiles {
+  [key: number]: IProfile[]
+}
+
 export interface ICampaign {
-  campaignId: number;
+  campaignId: string;
   clicks: number;
   cost: number;
   date: string;
+}
+
+export interface ICampaigns {
+  [key: number]: ICampaign[]
 }
 
