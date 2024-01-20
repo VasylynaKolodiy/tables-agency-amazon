@@ -3,6 +3,7 @@ import paginationFactory, {PaginationListStandalone, PaginationProvider} from "r
 import BootstrapTable, {PaginationOptions} from "react-bootstrap-table-next";
 import filterFactory from "react-bootstrap-table2-filter";
 import {IAccount, ICampaign, IProfile} from "../../models/interfaces";
+import { useNavigate} from "react-router-dom";
 
 interface ITableProps {
     data: (IAccount | IProfile | ICampaign)[];
@@ -11,7 +12,7 @@ interface ITableProps {
 }
 
 const Table: React.FC<ITableProps> = ({data, columns, previous = null}) => {
-
+    let navigate = useNavigate();
     const paginationOptions: PaginationOptions = {
         custom: true,
         totalSize: data.length,
@@ -39,7 +40,7 @@ const Table: React.FC<ITableProps> = ({data, columns, previous = null}) => {
               }) => (
                 <div>
                     {previous && (
-                        <p className='go-to-back' onClick={() => window.history.back()}>&larr; {previous}</p>
+                        <p className='go-to-back' onClick={() => navigate(-1)}>&larr; {previous}</p>
                     )}
 
                     <BootstrapTable

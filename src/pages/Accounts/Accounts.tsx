@@ -3,6 +3,7 @@ import {IAccount} from "../../models/interfaces";
 import {accountsData} from "../../constants/data";
 import {textFilter} from "react-bootstrap-table2-filter";
 import Table from "../../components/Table/Table";
+import {Link} from "react-router-dom";
 
 const Accounts: React.FC = () => {
     const data: IAccount[] = accountsData;
@@ -21,7 +22,7 @@ const Accounts: React.FC = () => {
                 );
             },
             // @ts-ignore
-            formatter: (cell) => <a href={`/profiles/${cell}`}><p className="first-column">{cell}</p></a>
+            formatter: (cell) => <Link to={`/profiles/${cell}`}><p className="first-column">{cell}</p></Link>
         },
         {
             dataField: 'email',

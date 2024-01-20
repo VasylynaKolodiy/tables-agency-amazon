@@ -3,6 +3,7 @@ import {IProfile} from "../../models/interfaces";
 import {profilesData} from "../../constants/data";
 import {textFilter} from "react-bootstrap-table2-filter";
 import Table from "../../components/Table/Table";
+import {Link} from "react-router-dom";
 
 const Profiles: React.FC = () => {
 
@@ -24,7 +25,7 @@ const Profiles: React.FC = () => {
                 );
             },
             // @ts-ignore
-            formatter: (cell) => <a href={`/campaigns/${cell}`}><p className="first-column">{cell}</p></a>
+            formatter: (cell) => <Link to={`/campaigns/${cell}`}><p className="first-column">{cell}</p></Link>
         },
         {
             dataField: 'country',

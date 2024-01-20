@@ -7,6 +7,7 @@ import Campaigns from "./pages/Campaigns/Campaigns";
 const App: React.FC = () => {
     return (
         <div className="App">
+            <p>GJHGH</p>
             <Routes>
                 <Route path='/' element={<Accounts/>}/>
                 <Route path='/profiles/:id' element={<Profiles/>}/>
